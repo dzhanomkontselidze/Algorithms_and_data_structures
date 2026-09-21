@@ -42,7 +42,7 @@ addItem(inventory, "CD Bagel");
 addItem(inventory, "Glowshard");
 addItem(inventory, "Thorn Ring");
 addItem(inventory, "Justice Axe");
-console.log("\nПочатковий інвентар:", inventory);
+console.log("\Початковий інвентар:", inventory);
 
 removeItem(inventory, "Revive Mint");
 console.log("Після видалення Revive Mint:", inventory);

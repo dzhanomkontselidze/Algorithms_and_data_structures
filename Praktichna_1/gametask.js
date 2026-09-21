@@ -37,8 +37,6 @@ function compactInventory(inv) {
     console.log("Інвентар успішно ущільнено");
 }
 
-}
-
 addItem(inventory, "Revive Mint");
 addItem(inventory, "CD Bagel");
 addItem(inventory, "Glowshard");

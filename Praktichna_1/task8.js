@@ -53,9 +53,9 @@ function task5_SwapMaxMin(arr) {
         if (result[i] > result[maxIndex]) maxIndex = i;
         if (result[i] < result[minIndex]) minIndex = i;
     }
-
+//[a,b]=[b,a]
     [result[maxIndex], result[minIndex]] = [result[minIndex], result[maxIndex]];
-    return result;
+    return result; 
 }
 // завдання 6
 function task6_SplitPosNeg(arr) {
@@ -91,10 +91,11 @@ function task8_ElementsBetweenAverages(arr1, arr2) {
     const avg2 = arr2.reduce((a, b) => a + b, 0) / arr2.length;
 
     const minAvg = Math.min(avg1, avg2);
-    const maxAvg = Math.Max(avg1, avg2);
+    const maxAvg = Math.max(avg1, avg2);
 
     return [...arr1, ...arr2].filter(x => x >= minAvg && x <= maxAvg);
 }
+
 const arrayLength = 10;
 const minVal = -10;
 const maxVal = 10;

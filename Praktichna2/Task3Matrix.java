@@ -44,7 +44,6 @@ public class Task3Matrix {
         int rows = matrix.length;
         int cols = matrix[0].length;
 
-        // 1. Знаходимо максимальне значення в матриці
         int maxVal = matrix[0][0];
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {

@@ -2,7 +2,6 @@ import java.util.Random;
 
 public class SortingApp {
 
-    // 1. Метод, що генерує масив заданої довжини у заданому діапазоні [min, max]
     public static int[] generateArray(int length, int min, int max) {
         int[] array = new int[length];
         Random random = new Random();
@@ -12,7 +11,6 @@ public class SortingApp {
         return array;
     }
 
-    // 2. Метод, що виводить елементи масиву у заданому форматі
     public static void printArray(int[] array) {
         if (array == null) {
             System.out.println("{}");
@@ -30,13 +28,13 @@ public class SortingApp {
         System.out.println(sb.toString());
     }
 
-    // 3. Сортування бульбашкою (Bubble sort)
+    //(Bubble sort)
     public static void bubbleSort(int[] array, boolean ascending) {
         if (array == null || array.length <= 1) return;
         int n = array.length;
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
-                // Визначаємо умову заміни залежно від напрямку сортування
+            
                 boolean condition = ascending ? (array[j] > array[j + 1]) : (array[j] < array[j + 1]);
                 if (condition) {
                     int temp = array[j];
@@ -47,7 +45,7 @@ public class SortingApp {
         }
     }
 
-    // 4. Сортування вставками (Insertion sort)
+    //(Insertion sort)
     public static void insertionSort(int[] array, boolean ascending) {
         if (array == null || array.length <= 1) return;
         int n = array.length;
@@ -63,7 +61,7 @@ public class SortingApp {
         }
     }
 
-    // 5. Сортування вибором (Selection sort)
+    // (Selection sort)
     public static void selectionSort(int[] array, boolean ascending) {
         if (array == null || array.length <= 1) return;
         int n = array.length;
@@ -71,21 +69,18 @@ public class SortingApp {
             int extremeIdx = i;
             for (int j = i + 1; j < n; j++) {
                 boolean condition = ascending ? (array[j] < array[extremeIdx]) : (array[j] > extremeIdx);
-                // Виправлення умови для вибору хіджа/мінімуму/максимуму:
                 if (ascending) {
                     if (array[j] < array[extremeIdx]) extremeIdx = j;
                 } else {
                     if (array[j] > array[extremeIdx]) extremeIdx = j;
                 }
             }
-            // Обмін елементів
             int temp = array[extremeIdx];
             array[extremeIdx] = array[i];
             array[i] = temp;
         }
     }
 
-    // Головний метод для перевірки та демонстрації
     public static void main(String[] args) {
         int length = 5;
         int min = 1;

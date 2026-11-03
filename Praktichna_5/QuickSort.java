@@ -128,7 +128,7 @@ public class QuickSortApp {
         System.out.println("За спаданням:  " + Arrays.toString(demo)
                 + "  впорядкований? " + isSorted(demo, false));
 
-        // 2. Порівняння продуктивності
+
         int[] sizes = {1_000, 10_000, 100_000};
         System.out.println();
         System.out.printf("%-10s %12s %12s %12s %12s%n",

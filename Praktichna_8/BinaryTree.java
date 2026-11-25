@@ -102,7 +102,6 @@ public class BinaryTree {
         }
     }
 
-    // 5. Вивести найменший елемент
     public int findMin() {
         if (root == null) {
             throw new IllegalStateException("Помилка: Дерево порожнє!");

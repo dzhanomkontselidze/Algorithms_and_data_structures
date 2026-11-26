@@ -2,33 +2,23 @@ public class Main {
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
 
+    
         int[] values = {3, 1, 9, 1, 7, 10, 6, 8};
-        for (int val : values) {
-            tree.add(val);
+        for (int v : values) {
+            tree.add(v);
         }
 
-        System.out.println("=== Початковий стан дерева ===");
+        System.out.println("=== Початкове дерево ===");
+        tree.printTree();
         tree.printAll();
-        System.out.println("Кількість елементів: " + tree.count());
-        System.out.println("Найменший елемент: " + tree.findMin());
-        System.out.println("Найбільший елемент: " + tree.findMax());
+        System.out.println("Кiлькiсть: " + tree.count() + " | Min: " + tree.findMin() + " | Max: " + tree.findMax());
 
-        System.out.println("\n=== Пошук елементів ===");
-        System.out.println("Чи є число 7 у дереві? " + tree.contains(7));
-        System.out.println("Чи є число 5 у дереві? " + tree.contains(5));
-
-        System.out.println("\n=== Видалення елементів (як у прикладі з ПР) ===");
+        System.out.println("\n=== Видаляємо 3 (корiнь з двома дiтьми -> замiна на 6) ===");
         tree.delete(3);
-        System.out.println("Після видалення 3:");
-        tree.printAll();
+        tree.printTree();
 
+        System.out.println("\n=== Видаляємо 6 (замiна на 7, пiдтягується 8) ===");
         tree.delete(6);
-        System.out.println("Після видалення 6:");
-        tree.printAll();
-
-        tree.delete(10);
-        System.out.println("Після видалення 10 (листок):");
-        tree.printAll();
-        System.out.println("Нова кількість елементів: " + tree.count());
+        tree.printTree();
     }
 }
